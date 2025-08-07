@@ -1,6 +1,5 @@
 import Image from "next/image"
 import { MdKeyboardArrowDown } from "react-icons/md"
-import { RiArrowDropDownLine } from "react-icons/ri"
 
 
 const Navbar = () => {

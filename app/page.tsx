@@ -1,7 +1,5 @@
-import Image from "next/image";
-// import styles from "./page.module.css";
+
 import Navbar from "@/components/navbar/Navbar";
-import { IoMdChatbubbles } from "react-icons/io";
 import { BsChatLeftText, BsClipboardPlus } from "react-icons/bs";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { GiTransparentTubes } from "react-icons/gi";

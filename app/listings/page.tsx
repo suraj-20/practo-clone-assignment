@@ -1,6 +1,7 @@
 "use client"
 
-import DoctorCard from '@/components/cards/DoctorCard';
+import Image from 'next/image';
+// import DoctorCard from '@/components/cards/DoctorCard';
 import { useParams } from 'next/navigation';
 import React, { useEffect, useState } from 'react'
 import { IoIosArrowDown } from 'react-icons/io';
@@ -9,7 +10,7 @@ export default function Listing() {
     const params = useParams();
     const location = params.location;
     const specialty = params.specialty;
-    const [doctors, setDoctors] = useState([]);
+    const [, setDoctors] = useState([]);
 
     useEffect(() => {
         if (location && specialty) {
@@ -19,9 +20,9 @@ export default function Listing() {
         }
     }, [location, specialty]);
 
-    const [isOpen, setIsOpen] = useState(false);
+    // const [isOpen, setIsOpen] = useState(false);
 
-    const toggleDropdown = () => setIsOpen(prev => !prev);
+    // const toggleDropdown = () => setIsOpen(prev => !prev);
 
     return (
         <div className="py-4">
@@ -53,7 +54,7 @@ export default function Listing() {
                 <div className="md:w-[90%] lg:w-[80%] mx-auto p-2 flex gap-3">
                     <div className="relative inline-block w-[14%]">
                         <button
-                            onClick={toggleDropdown}
+                            // onClick={toggleDropdown}
                             className="inline-flex w-full justify-between bg-[#434ea2] px-3 py-1 text-sm font-semibold text-gray-200"
                         >
                             Gender
@@ -66,7 +67,7 @@ export default function Listing() {
 
                     <div className="relative inline-block w-[14%]">
                         <button
-                            onClick={toggleDropdown}
+                            // onClick={toggleDropdown}
                             className="inline-flex w-full justify-between bg-[#434ea2] px-3 py-1 text-sm font-semibold text-gray-200"
                         >
                             Patient Stories
@@ -79,7 +80,7 @@ export default function Listing() {
 
                     <div className="relative inline-block w-[14%]">
                         <button
-                            onClick={toggleDropdown}
+                            // onClick={toggleDropdown}
                             className="inline-flex w-full justify-between bg-[#434ea2] px-3 py-1 text-sm font-semibold text-gray-200"
                         >
                             Expirence
@@ -92,7 +93,7 @@ export default function Listing() {
 
                     <div className="relative inline-block w-[14%]">
                         <button
-                            onClick={toggleDropdown}
+                            // onClick={toggleDropdown}
                             className="inline-flex w-full justify-start gap-x-3 px-3 py-1 text-sm font-semibold text-gray-200 shadow-xs"
                         >
                             All Filters
@@ -106,7 +107,7 @@ export default function Listing() {
                     <div className="relative flex items-center w-[20%]">
                         <p className='text-white text-md w-2/4'>Sort By</p>
                         <button
-                            onClick={toggleDropdown}
+                            // onClick={toggleDropdown}
                             className="inline-flex w-full justify-between bg-[#434ea2] px-3 py-1 text-sm font-semibold text-gray-200"
                         >
                             Relevence
@@ -123,7 +124,7 @@ export default function Listing() {
                 <div className='w-[70%]'>
                     <div className='border-b border-gray-300'>
                         <h2 className="text-3xl font-semibold mb-2">{specialty} Darmitiologist availavle in Gurgaon{location}</h2>
-                        <p className='font-noraml mb-8 flex gap-2 items-center'><img src="/verified.svg" alt="verified doctor details" /> Book appointments with minimum wait-time & verified doctor details</p>
+                        <p className='font-noraml mb-8 flex gap-2 items-center'><Image src="/verified.svg" alt="verified doctor details" /> Book appointments with minimum wait-time & verified doctor details</p>
                     </div>
                     <div className="space-y-4">
                         <div className="flex gap-6 p-4 mt-6 border-b border-gray-300 pb-10">
